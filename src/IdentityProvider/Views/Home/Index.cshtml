@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Identity Provider";
+}
+
+<h2>@ViewData["Title"]</h2>
+@if (ViewBag.IsAuthenticated)
+{
+    <p>
+        Welcome to Identity Provider for WanVet Application.
+        Thanks a lot for registration. Enjoy your journey!
+    </p>
+}
+else
+{
+    <p>
+        Welcome to Identity Provider for WanVet Application.
+        You will need to register or login in this application and you will be redirected to the main one. Enjoy your journey!
+    </p>
+
+}

@@ -1,0 +1,23 @@
+﻿@using IdentityProvider.Models.AccountViewModels
+@model IdentityProvider.Models.AccountViewModels.LoggedOutViewModel
+
+<div class="page-header">
+    <h1>
+        Logout     
+    </h1>
+    
+    <p>You are now logged out</p>
+
+    @if (Model.PostLogoutRedirectUri != null)
+    {
+        <div>
+            Click <a href="@Model.PostLogoutRedirectUri">here</a> to return to the
+            <span>@Model.ClientName</span> application.
+        </div>
+    }
+
+    @if (Model.SignOutIframeUrl != null)
+    {
+        <iframe style="display:none" width="0" height="0" class="signout" src="@Model.SignOutIframeUrl"></iframe>
+    }
+</div>
